@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta2 Çalışması</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        nav {
+            background-color: #333;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin: 50px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .section img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            text-align: justify;
+            font-size: 16px;
+            color: #333;
+        }
+
+        @media (min-width: 768px) {
+            .section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .section img {
+                width: 45%;
+                margin-bottom: 0;
+            }
+
+            .section p {
+                width: 50%;
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#ruzgarin-pesinde">Rüzgarın Peşinde</a></li>
+            <li><a href="#ilk-yaris">İlk Yarış</a></li>
+            <li><a href="#sessiz-kahraman">Şehirdeki Sessiz Kahraman</a></li>
+            <li><a href="#kaybolan-ses">Kaybolan Ses</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="section" id="ruzgarin-pesinde">
+            <img src="img/image1.jpg.avif" alt="Rüzgarın peşinde görsel">
+            <h1>Rüzgarın Peşinde</h1>
+            <p>Küçük kasabanın dar sokaklarında, eski model motosikletiyle Ahmet hızla ilerliyordu. Rüzgar yüzüne
+                çarparken kendini özgür hissediyordu. Annesi her zaman ona "Yavaş git!" derdi, ama o motorun verdiği
+                hızı seviyordu. Sonra bir gün, rüzgarı yakalamak için çıktığı bu yolda, bir dağ tepesine ulaştı. Orada,
+                sonsuz gökyüzüne bakarken, asıl özgürlüğün hızda değil, sakinlikte olduğunu fark etti.</p>
+        </div>
+
+        <div class="section" id="ilk-yaris">
+            <img src="img/image2.png" alt="İlk yarış görsel">
+            <h1>İlk Yarış</h1>
+            <p>Ali’nin babası ona çocukken eski bir motoru tamir etmeyi öğretmişti. Yıllar sonra Ali, o motoru yeniden
+                çalıştırdı. İlk yarışı yakındı. Yarış günü geldiğinde kalbi hızla atıyordu. Herkes ona güldü; motor eski
+                ve yavaş görünüyordu. Ama Ali, babasının öğrettiklerini hatırlayarak motoru ustalıkla sürdü ve son
+                virajda tüm rakiplerini geride bırakarak yarışı kazandı. Eski motor, yılların bilgisiyle yeni zaferler
+                kazanmıştı.</p>
+        </div>
+
+        <div class="section" id="sessiz-kahraman">
+            <img src="img/image3.jpg" alt="Şehirdeki sessiz kahraman görsel">
+            <h1>Şehirdeki Sessiz Kahraman</h1>
+            <p>İstanbul’un kalabalık caddelerinde, gece vakti sessiz bir elektrikli scooter yolda kayıyordu. Berke, her
+                gece sokakları dolaşarak ihtiyaç sahiplerine yiyecek ve su taşıyordu. Motorunun sessizliği, geceyi
+                bölmeden yardımlarını ulaştırmasını sağlıyordu. Kimse onu görmüyor, sesi bile duyulmuyordu. Ama o,
+                motoruyla kocaman bir şehirde sessiz bir kahraman olmuştu.
+            </p>
+        </div>
+
+        <div class="section" id="kaybolan-ses">
+            <img src="img/image4.jpg" alt="Kaybolan ses görsel">
+            <h1>Kaybolan Ses</h1>
+            <p>Esra, çocukluğundan beri motosikletlerin çıkardığı sesi severdi. Onlar onun için bir müzik gibiydi.
+                Babasıyla birlikte eski motorları toplar, tamir ederdi. Fakat bir gün, babasının atölyesine gittiğinde
+                motorlardan çıkan seslerin kaybolduğunu fark etti. Babası, elektrikli motorlara geçmişti. Esra
+                başlangıçta hayal kırıklığı yaşadı, çünkü o eski motor seslerini özlemişti. Ancak zamanla, sessizliğin
+                yeni bir tür huzur getirdiğini fark etti ve babasıyla birlikte bu yeni dünyayı keşfetmeye başladı.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
