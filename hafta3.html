@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 3 Çalışması</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        nav {
+            background-color: #333;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin: 50px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .section img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            text-align: justify;
+            font-size: 16px;
+            color: #333;
+        }
+
+        @media (min-width: 768px) {
+            .section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .section img {
+                width: 45%;
+                margin-bottom: 0;
+            }
+
+            .section p {
+                width: 50%;
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#tablo1">Tablo 1</a></li>
+            <li><a href="#gorev-2">Görev 2</a></li>
+            <li><a href="#gorev-3">Görev 3</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="section" id="tablo1">
+            <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                    <th>Saat</th>
+                    <th>Pazartesi</th>
+                    <th>Salı</th>
+                    <th>Çarşamba</th>
+                    <th>Perşembe</th>
+                    <th>Cuma</th>
+                </tr>
+                <tr>
+                    <td>08:40-09:30</td>
+                    <td>EGT304.07</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>BTE311</td>
+                </tr>
+                <tr>
+                    <td>09:40-10:30</td>
+                    <td>EGT304.07</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>BTE311</td>
+                </tr>
+                <tr>
+                    <td>10:40-11:30</td>
+                    <td>BTE307.02</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>BTE311</td>
+                </tr>
+                <tr>
+                    <td>11:40-12:30</td>
+                    <td>BTE307.02</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>BTE311</td>
+                </tr>
+                <tr>
+                    <td>12:40-13:30</td>
+                    <td></td>
+                    <td></td>
+                    <td>BTE322</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>13:40-14:30</td>
+                    <td>EGT303.04</td>
+                    <td></td>
+                    <td>BTE322</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>14:40-15:30</td>
+                    <td>EGT303.04</td>
+                    <td>BTE309</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>15:40-16:30</td>
+                    <td>BTE307.02</td>
+                    <td>BTE309</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>16:40-17:30</td>
+                    <td>BTE307.02</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div class="section" id="gorev-2">
+            <form>
+                <table border="1" cellspacing="5" cellpadding="5">
+                    <tr>
+                        <th colspan="2">
+                            <h1>Lütfen Formu Eksiksiz Doldurunuz.</h1>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <h4>Hesap Bilgileriniz</h4>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Kullanıcı Adı :</td>
+                        <td><input type="text" name="username" placeholder="Kullanıcı adı giriniz" required></td>
+                    </tr>
+                    <tr>
+                        <td>Eposta :</td>
+                        <td><input type="email" name="eposta" placeholder="Eposta giriniz" required></td>
+                    </tr>
+                    <tr>
+                        <td>Parola :</td>
+                        <td><input type="password" name="parola" placeholder="parola giriniz" required></td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2">
+                            <h4>Kişisel Bilgileriniz</h4>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Ad :</td>
+                        <td><input type="text" name="ad"></td>
+                    </tr>
+                    <tr>
+                        <td>Soyad :</td>
+                        <td><input type="text" name="soyad"></td>
+                    </tr>
+                    <tr>
+                        <td>Şehir :</td>
+                        <td>
+                            <select name="sehir">
+                                <option>Seçiniz</option>
+                                <option>Ankara</option>
+                                <option>İstanbul</option>
+                                <option>Kocaeli</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cinsiyet :</td>
+                        <td>
+                            <input type="radio" name="cinsiyet"> Erkek
+                            <input type="radio" name="cinsiyet"> Kadın
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hobileriniz :</td>
+                        <td>
+                            <input type="checkbox" name="hobiler"> Sinema
+                            <input type="checkbox" name="hobiler"> Gezmek
+                            <input type="checkbox" name="hobiler"> Spor
+                            <input type="checkbox" name="hobiler"> Kitap
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <input type="submit" value="Kaydet">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+
+        <div class="section" id="gorev-3">
+            <table border="1" cellspacing="0" cellpadding="10">
+                <tr>
+                    <td colspan="2">Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Cell 4</td>
+                    <td>Cell 5</td>
+                    <td>Cell 6</td>
+                    <td>Cell 7</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Cell 8</td>
+                </tr>
+                <tr>
+                    <td>Cell 9</td>
+                    <td colspan="2">Cell 10</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
