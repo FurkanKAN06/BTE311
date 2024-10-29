@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 4 Çalışması</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        nav {
+            background-color: #333;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin: 50px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .section h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .section form p {
+            margin: 10px 0;
+        }
+
+        .section input[type="text"],
+        .section input[type="email"],
+        .section input[type="password"],
+        .section input[type="date"],
+        .section input[type="number"],
+        .section input[type="color"],
+        .section input[type="range"],
+        .section select {
+            width: 100%;
+            max-width: 300px;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        .section input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .section input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        @media (min-width: 768px) {
+            .section {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#uyelik-formu">Üyelik Formu</a></li>
+            <li><a href="#web-testi">WEB Testi</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="section" id="uyelik-formu">
+            <form>
+                <h1>Üyelik Formu</h1>
+                <p>Kullanıcı Adı: <input type="text" name="username" required></p>
+                <p>E-posta: <input type="email" name="email" required></p>
+                <p>Parola: <input type="password" name="password" required></p>
+                <p>Doğum Tarihi: <input type="date" name="dob" required></p>
+                <p>Cinsiyet:
+                    <input type="radio" name="gender" value="Erkek" required> Erkek
+                    <input type="radio" name="gender" value="Kadın"> Kadın
+                </p>
+                <p>Şehir:
+                    <select name="city">
+                        <option value="Istanbul">Istanbul</option>
+                        <option value="Ankara">Ankara</option>
+                        <option value="Izmir">Izmir</option>
+                    </select>
+                </p>
+                <p>Hobileriniz:
+                    <input type="checkbox" name="hobby" value="Sinema"> Sinema
+                    <input type="checkbox" name="hobby" value="Spor"> Spor
+                    <input type="checkbox" name="hobby" value="Kitap"> Kitap
+                </p>
+                <input type="submit" value="Üye Ol">
+            </form>
+        </div>
+
+        <div class="section" id="web-testi">
+            <form>
+                <h1>WEB Programcılığı Sınavı</h1>
+                <p>Adınız: <input type="text" name="name" required></p>
+                <p>Cinsiyetiniz:
+                    <input type="radio" name="gender" value="Erkek" required> Erkek
+                    <input type="radio" name="gender" value="Kadın"> Kadın
+                </p>
+                <p>Hangi programlama dillerini biliyorsunuz?
+                    <input type="checkbox" name="language" value="HTML"> HTML
+                    <input type="checkbox" name="language" value="CSS"> CSS
+                    <input type="checkbox" name="language" value="JavaScript"> JavaScript
+                    <input type="checkbox" name="language" value="Python"> Python
+                    <input type="checkbox" name="language" value="Java"> Java
+                </p>
+                <p>Deneyim Seviyesi:
+                    <select name="experience">
+                        <option value="beginner">Başlangıç</option>
+                        <option value="intermediate">Orta Seviye</option>
+                        <option value="advanced">İleri Seviye</option>
+                    </select>
+                </p>
+                <p>Web Programlama Yılı: <input type="range" name="years" min="0" max="10"></p>
+                <p>Favori Renk: <input type="color" name="color"></p>
+                <p>Kaç saat çalışıyorsunuz? <input type="number" name="hours" min="0" max="24"></p>
+                <p>Sınav Tarihi: <input type="date" name="exam_date" required></p>
+                <p>1. HTML hangi yıl geliştirildi?</p>
+                <p>
+                    <input type="radio" name="q1" value="1991"> 1991<br>
+                    <input type="radio" name="q1" value="1995"> 1995<br>
+                    <input type="radio" name="q1" value="2000"> 2000<br>
+                    <input type="radio" name="q1" value="2005"> 2005
+                </p>
+                <p>2. Aşağıdaki özelliklerden hangileri CSS ile ilgilidir? (Birden fazla seçim yapabilirsiniz)</p>
+                <p>
+                    <input type="checkbox" name="q2" value="Renk düzenleme"> Renk düzenleme<br>
+                    <input type="checkbox" name="q2" value="Dizgi ayarlama"> Dizgi ayarlama<br>
+                    <input type="checkbox" name="q2" value="Veri tabanı yönetimi"> Veri tabanı yönetimi<br>
+                    <input type="checkbox" name="q2" value="Sayfa düzenleme"> Sayfa düzenleme
+                </p>
+                <p>3. HTML’de bir link nasıl eklenir? Kısaca açıklayın:</p>
+                <textarea name="q3" rows="4" cols="50" placeholder="Cevabınızı buraya yazınız."></textarea>
+                <p>4. Aşağıdaki dillerden hangisi bir web sunucusu tarafı dilidir?</p>
+                <select name="q4">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                </select>
+                <p>5. JavaScript'te bir alert penceresi nasıl oluşturulur? Kod yazınız:</p>
+                <textarea name="q5" rows="2" cols="50" placeholder="Örnek: alert('Merhaba!');"></textarea>
+                <p>6. Neden web programlama öğrenmek istiyorsunuz? Kısaca açıklayın:</p>
+                <textarea name="q6" rows="4" cols="50" placeholder="Cevabınızı buraya yazınız."></textarea>
+                <input type="submit" value="Sınavı Tamamla">
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
