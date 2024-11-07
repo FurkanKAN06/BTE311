@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 6 Çalışması</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        nav {
+            background-color: #333;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin: 50px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .section img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            text-align: justify;
+            font-size: 16px;
+            color: #333;
+        }
+
+        @media (min-width: 768px) {
+            .section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .section img {
+                width: 45%;
+                margin-bottom: 0;
+            }
+
+            .section p {
+                width: 50%;
+                margin-left: 20px;
+            }
+        }
+
+        .grid-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+            margin: 50px 0;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        .box-a {
+            background-color: #001f5c;
+            flex: 1;
+        }
+
+        .box-b {
+            background-color: #f08c00;
+            flex: 1;
+        }
+
+        .box-c {
+            background-color: #8db600;
+            flex: 1;
+        }
+
+        .box-d {
+            background-color: #d00000;
+            flex: 1;
+        }
+
+        .box-e {
+            background-color: #ffcc00;
+            flex: 2;
+        }
+
+        .box-f {
+            background-color: #8e44ad;
+            flex: 1;
+        }
+
+        .box-g {
+            background-color: #28a745;
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#flex-box">Flexbox</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="flex-box">
+        <div class="grid-container">
+            <div class="row">
+                <div class="box box-a">A</div>
+            </div>
+            <div class="row">
+                <div class="box box-b">B</div>
+                <div class="box box-c">C</div>
+                <div class="box box-d">D</div>
+            </div>
+            <div class="row">
+                <div class="box box-e">E</div>
+                <div class="box box-f">F</div>
+            </div>
+            <div class="row">
+                <div class="box box-g">G</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
