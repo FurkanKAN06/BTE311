@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 5 Çalışması</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        nav {
+            background-color: #333;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin: 50px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .section img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            text-align: justify;
+            font-size: 16px;
+            color: #333;
+        }
+
+        @media (min-width: 768px) {
+            .section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .section img {
+                width: 45%;
+                margin-bottom: 0;
+            }
+
+            .section p {
+                width: 50%;
+                margin-left: 20px;
+            }
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .time-cell {
+            background-color: #b3e5fc;
+        }
+        .monday-cell {
+            background-color: #ffccbc;
+        }
+        .tuesday-cell {
+            background-color: #FF6F61;
+        }
+        .wednesday-cell {
+            background-color: #4CAF50;
+        }
+        .friday-cell {
+            background-color: #c5e1a5;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#tablo1">Tablo Internal</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div>
+            <h1>Internal CSS</h1>
+        </div>
+        <div class="section" id="tablo1">
+            <table>
+                <tr>
+                    <th>Saat</th>
+                    <th>Pazartesi</th>
+                    <th>Salı</th>
+                    <th>Çarşamba</th>
+                    <th>Perşembe</th>
+                    <th>Cuma</th>
+                </tr>
+                <tr>
+                    <td class="time-cell">08:40-09:30</td>
+                    <td class="monday-cell">EGT304.07</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="friday-cell">BTE311</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">09:40-10:30</td>
+                    <td class="monday-cell">EGT304.07</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="friday-cell">BTE311</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">10:40-11:30</td>
+                    <td class="monday-cell">BTE307.02</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="friday-cell">BTE311</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">11:40-12:30</td>
+                    <td class="monday-cell">BTE307.02</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="friday-cell">BTE311</td>
+                </tr>
+                <tr>
+                    <td class="time-cell">12:40-13:30</td>
+                    <td></td>
+                    <td></td>
+                    <td class="wednesday-cell">BTE322</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-cell">13:40-14:30</td>
+                    <td class="monday-cell">EGT303.04</td>
+                    <td></td>
+                    <td class="wednesday-cell">BTE322</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-cell">14:40-15:30</td>
+                    <td class="monday-cell">EGT303.04</td>
+                    <td class="tuesday-cell">BTE309</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-cell">15:40-16:30</td>
+                    <td class="monday-cell">BTE307.02</td>
+                    <td class="tuesday-cell">BTE309</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time-cell">16:40-17:30</td>
+                    <td class="monday-cell">BTE307.02</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+</body>
+
+</html>

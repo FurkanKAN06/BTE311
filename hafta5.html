@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 5 Çalışması</title>
+    <style>
+        .circle-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .circle {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        .red {
+            background-color: #FF6F61;
+            top: 30px;
+            left: 50px;
+        }
+
+        .blue {
+            background-color: #8A2BE2;
+            top: 30px;
+            left: 120px;
+        }
+
+        .yellow {
+            background-color: #FFD700;
+            top: 100px;
+            left: 85px;
+        }
+
+        nav {
+            background-color: #333;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .section {
+            margin: 50px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .section img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            text-align: justify;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#Tablo">Tablo Inline</a></li>
+            <li><a href="#circle-div">Daire Css</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="section" id="tablo">
+            <h1>Inline CSS</h1>
+            <table border="1" cellspacing="0" cellpadding="5" style="width:100%; text-align:center;">
+                <tr style="background-color: #f2f2f2;">
+                    <th style="padding: 10px; background-color: #4CAF50; color: white;">Saat</th>
+                    <th style="padding: 10px; background-color: #4CAF50; color: white;">Pazartesi</th>
+                    <th style="padding: 10px; background-color: #4CAF50; color: white;">Salı</th>
+                    <th style="padding: 10px; background-color: #4CAF50; color: white;">Çarşamba</th>
+                    <th style="padding: 10px; background-color: #4CAF50; color: white;">Perşembe</th>
+                    <th style="padding: 10px; background-color: #4CAF50; color: white;">Cuma</th>
+                </tr>
+                <tr>
+                    <td style="background-color: #b3e5fc;">08:40-09:30</td>
+                    <td style="background-color: #ffccbc;">EGT304.07</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="background-color: #c5e1a5;">BTE311</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #b3e5fc;">09:40-10:30</td>
+                    <td style="background-color: #ffccbc;">EGT304.07</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="background-color: #c5e1a5;">BTE311</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #b3e5fc;">10:40-11:30</td>
+                    <td style="background-color: #ffccbc;">BTE307.02</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="background-color: #c5e1a5;">BTE311</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #b3e5fc;">11:40-12:30</td>
+                    <td style="background-color: #ffccbc;">BTE307.02</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="background-color: #c5e1a5;">BTE311</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #b3e5fc;">12:40-13:30</td>
+                    <td></td>
+                    <td></td>
+                    <td style="background-color: #4CAF50;">BTE322</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="background-color: #b3e5fc;">13:40-14:30</td>
+                    <td style="background-color: #ffccbc;">EGT303.04</td>
+                    <td></td>
+                    <td style="background-color: #4CAF50;">BTE322</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="background-color: #b3e5fc;">14:40-15:30</td>
+                    <td style="background-color: #ffccbc;">EGT303.04</td>
+                    <td style="background-color: #FF6F61;">BTE309</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="background-color: #b3e5fc;">15:40-16:30</td>
+                    <td style="background-color: #ffccbc;">BTE307.02</td>
+                    <td style="background-color: #FF6F61;">BTE309</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="background-color: #b3e5fc;">16:40-17:30</td>
+                    <td style="background-color: #ffccbc;">BTE307.02</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div>
+            <h1>Daire CSS</h1>
+        </div>
+        <div class="circle-container" id="circle-div">
+            <div class="circle red"></div>
+            <div class="circle blue"></div>
+            <div class="circle yellow"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
