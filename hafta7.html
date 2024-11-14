@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hafta 7 Çalışması</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f1e3;
+      margin: 0;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: relative;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .eye {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 30px;
+    }
+
+    .eye.left {
+      left: 30px;
+    }
+
+    .eye.right {
+      right: 30px;
+    }
+
+    .mouth {
+      position: absolute;
+      bottom: 20px;
+      background-color: black;
+    }
+
+    .circle1 .mouth {
+      width: 40px;
+      height: 20px;
+      border-radius: 0 0 20px 20px;
+      bottom: 15px;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .circle1 .mouth::before,
+    .circle1 .mouth::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      margin: 0 5px;
+    }
+
+    .circle2 .mouth {
+      width: 40px;
+      height: 10px;
+    }
+
+    .circle3 .mouth {
+      width: 40px;
+      height: 10px;
+    }
+
+    .circle4 .mouth {
+      width: 50px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .circle5 .mouth {
+      width: 40px;
+      height: 10px;
+    }
+
+    .circle1 {
+      background-color: purple;
+      animation: upDown 2s infinite alternate;
+    }
+
+    .circle2 {
+      background-color: red;
+      animation: scaleColor 2s infinite alternate;
+    }
+
+    .circle3 {
+      background-color: pink;
+      animation: fade 2s infinite alternate;
+    }
+
+    .circle4 {
+      background-color: blue;
+      animation: leftRight 2s infinite alternate;
+    }
+
+    .circle5 {
+      background-color: red;
+      animation: rotate 2s infinite linear;
+    }
+
+    @keyframes upDown {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(20px);
+      }
+    }
+
+    @keyframes scaleColor {
+      from {
+        transform: scale(1);
+        background-color: red;
+      }
+
+      to {
+        transform: scale(1.5);
+        background-color: orange;
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0.5;
+      }
+    }
+
+    @keyframes leftRight {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(20px);
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="circle circle1">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <div class="circle circle2">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <div class="circle circle3">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <div class="circle circle4">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <div class="circle circle5">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+
+</body>
+
+</html>
