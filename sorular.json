@@ -1,0 +1,115 @@
+{
+    "questions": [
+      {
+        "title": "HTML Etiketleri",
+        "description": "Bir HTML belgesindeki başlık etiketinin doğru kullanımı aşağıdakilerden hangisidir?",
+        "options": [
+          "<header>",
+          "<title>",
+          "<h1>",
+          "<head>"
+        ],
+        "correctAnswer": "<h1>"
+      },
+      {
+        "title": "CSS'in Görevi",
+        "description": "CSS ne için kullanılır?",
+        "options": [
+          "Web sayfalarına yapı eklemek",
+          "Web sayfalarına stil ve görünüm eklemek",
+          "Web sayfasını programlamak",
+          "Web sayfasını sunucuya yüklemek"
+        ],
+        "correctAnswer": "Web sayfalarına stil ve görünüm eklemek"
+      },
+      {
+        "title": "JavaScript Türü",
+        "description": "JavaScript hangi tür bir dildir?",
+        "options": [
+          "Markup Language",
+          "Scripting Language",
+          "Styling Language",
+          "Query Language"
+        ],
+        "correctAnswer": "Scripting Language"
+      },
+      {
+        "title": "HTML Doctype",
+        "description": "Bir HTML5 belgesinde kullanılacak doğru <!DOCTYPE> beyanı hangisidir?",
+        "options": [
+          "<!DOCTYPE html>",
+          "<!DOCTYPE HTML5>",
+          "<!DOCTYPE document>",
+          "<!DOCTYPE>"
+        ],
+        "correctAnswer": "<!DOCTYPE html>"
+      },
+      {
+        "title": "CSS Renk Değerleri",
+        "description": "CSS'te kırmızı rengi temsil eden doğru renk değeri nedir?",
+        "options": [
+          "rgb(255, 0, 0)",
+          "#0000FF",
+          "rgba(0, 255, 0, 1)",
+          "#FF0000"
+        ],
+        "correctAnswer": "rgb(255, 0, 0)"
+      },
+      {
+        "title": "JavaScript Değişken Tanımlama",
+        "description": "JavaScript'te bir değişken nasıl tanımlanır?",
+        "options": [
+          "var myVariable;",
+          "variable myVariable;",
+          "let myVariable;",
+          "const myVariable;"
+        ],
+        "correctAnswer": "var myVariable;"
+      },
+      {
+        "title": "HTML'de Görüntü Eklemek",
+        "description": "HTML'de bir görüntü eklemek için hangi etiket kullanılır?",
+        "options": [
+          "<img>",
+          "<picture>",
+          "<image>",
+          "<media>"
+        ],
+        "correctAnswer": "<img>"
+      },
+      {
+        "title": "CSS'de Sınıf Seçici",
+        "description": "Bir CSS sınıf seçicisi nasıl yazılır?",
+        "options": [
+          "#classname",
+          ".classname",
+          "*classname",
+          "&classname"
+        ],
+        "correctAnswer": ".classname"
+      },
+      {
+        "title": "JavaScript Fonksiyonları",
+        "description": "JavaScript'te bir fonksiyon nasıl tanımlanır?",
+        "options": [
+          "function myFunction() {}",
+          "def myFunction() {}",
+          "funct myFunction() {}",
+          "func myFunction() {}"
+        ],
+        "correctAnswer": "function myFunction() {}"
+      },
+      {
+        "title": "HTML'de Bağlantılar",
+        "description": "Bir HTML belgesinde bağlantılar oluşturmak için hangi etiket kullanılır?",
+        "options": [
+          "<a>",
+          "<link>",
+          "<nav>",
+          "<href>"
+        ],
+        "correctAnswer": "<a>"
+      }
+    ]
+  }
+  

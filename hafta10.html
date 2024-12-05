@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafta 10 Çalışması</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            color: #333;
+        }
+
+        nav {
+            background-color: #333;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 100px 20px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1000;
+            display: none;
+        }
+
+        #popup h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        #popup p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        #popup button {
+            margin-top: 10px;
+            background-color: #333;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#questions-container">Test Uygulaması</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Test Uygulaması</h1>
+        <div id="questions-container"></div>
+        <button id="submit-test">Testi Gönder</button>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="popup">
+        <h2>Test Sonucu</h2>
+        <p id="popup-result"></p>
+        <button id="close-popup">Kapat</button>
+    </div>
+
+    <script>
+        fetch('sorular.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('JSON dosyası yüklenirken hata oluştu!');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const questionsContainer = document.getElementById('questions-container');
+                const submitButton = document.getElementById('submit-test');
+                const popup = document.getElementById('popup');
+                const popupResult = document.getElementById('popup-result');
+                const overlay = document.getElementById('overlay');
+                const closePopup = document.getElementById('close-popup');
+
+                data.questions.forEach((question, index) => {
+                    const questionElement = document.createElement('div');
+                    questionElement.classList.add('question');
+
+                    const title = document.createElement('h2');
+                    title.textContent = `${index + 1}. ${question.title}`;
+                    questionElement.appendChild(title);
+
+                    const description = document.createElement('p');
+                    description.textContent = question.description;
+                    questionElement.appendChild(description);
+
+                    const optionsContainer = document.createElement('div');
+                    question.options.forEach(option => {
+                        const optionLabel = document.createElement('label');
+                        const optionInput = document.createElement('input');
+                        optionInput.type = 'radio';
+                        optionInput.name = `question-${index}`;
+                        optionInput.value = option;
+                        optionLabel.appendChild(optionInput);
+                        optionLabel.appendChild(document.createTextNode(option));
+                        optionsContainer.appendChild(optionLabel);
+                        optionsContainer.appendChild(document.createElement('br'));
+                    });
+                    questionElement.appendChild(optionsContainer);
+
+                    questionsContainer.appendChild(questionElement);
+                });
+
+                submitButton.addEventListener('click', () => {
+                    let score = 0;
+                    data.questions.forEach((question, index) => {
+                        const selectedOption = document.querySelector(
+                            `input[name="question-${index}"]:checked`
+                        );
+
+                        if (selectedOption && selectedOption.value === question.correctAnswer) {
+                            score++;
+                        }
+                    });
+
+                    popupResult.textContent = `Sonuç: ${score}/${data.questions.length} doğru!`;
+                    popup.style.display = 'block';
+                    overlay.style.display = 'block';
+                });
+
+                closePopup.addEventListener('click', () => {
+                    popup.style.display = 'none';
+                    overlay.style.display = 'none';
+                });
+
+                overlay.addEventListener('click', () => {
+                    popup.style.display = 'none';
+                    overlay.style.display = 'none';
+                });
+            })
+            .catch(error => {
+                console.error('Hata:', error.message);
+            });
+    </script>
+</body>
+
+</html>
