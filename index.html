@@ -9,6 +9,9 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
         }
 
         .week {
@@ -16,49 +19,89 @@
         }
 
         .week h2 {
-            background-color: #f2f2f2;
+            background-color: #007BFF;
+            color: white;
             padding: 10px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #fff;
             border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .links ul {
-            list-style-type: none;
-            padding: 0;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .links ul li {
-            margin: 10px 0;
-        }
-
-        .links ul li a {
+        .card a {
+            display: block;
             text-decoration: none;
-            color: #1a73e8;
+            color: #007BFF;
+            font-weight: bold;
+            padding: 15px;
+            text-align: center;
+            transition: color 0.3s ease;
         }
 
-        .links ul li a:hover {
-            text-decoration: underline;
+        .card a:hover {
+            color: #0056b3;
         }
+
     </style>
 </head>
 
 <body>
     <div class="week">
-        <h2>Haftalık bağlantılar</h2>
-        <div class="links">
-            <ul>
-                <li><a href="hafta2.html" target="_blank">Hafta 2 Masal</a></li>
-                <li><a href="hafta3.html" target="_blank">Hafta 3 Tablo</a></li>
-                <li><a href="hafta4.html" target="_blank">Hafta 4 Form</a></li>
-                <li><a href="hafta5.html" target="_blank">Hafta 5 Inline Css</a></li>
-                <li><a href="hafta5css.html" target="_blank">Hafta 5 Internal Css</a></li>
-                <li><a href="hafta5CssExternal.html" target="_blank">Hafta 5 External Css</a></li>
-                <li><a href="hafta6.html" target="_blank">Hafta 6 Flexbox</a></li>
-                <li><a href="hafta7.html" target="_blank">Hafta 7 CSS animation</a></li>
-                <li><a href="hafta8.html" target="_blank">Hafta 8 Bootstrap</a></li>
-                <li><a href="hafta9.html" target="_blank">Hafta 9 JavaScript</a></li>
-                <li><a href="hafta10.html" target="_blank">Hafta 10 Test Uygulaması</a></li>
-                <li><a href="" target="_blank">dummy</a></li>
-            </ul>
+        <h2>Haftalık Bağlantılar</h2>
+        <div class="card-container">
+            <div class="card">
+                <a href="hafta2.html" target="_blank">Hafta 2 Masal</a>
+            </div>
+            <div class="card">
+                <a href="hafta3.html" target="_blank">Hafta 3 Tablo</a>
+            </div>
+            <div class="card">
+                <a href="hafta4.html" target="_blank">Hafta 4 Form</a>
+            </div>
+            <div class="card">
+                <a href="hafta5.html" target="_blank">Hafta 5 Inline CSS</a>
+            </div>
+            <div class="card">
+                <a href="hafta5css.html" target="_blank">Hafta 5 Internal CSS</a>
+            </div>
+            <div class="card">
+                <a href="hafta5CssExternal.html" target="_blank">Hafta 5 External CSS</a>
+            </div>
+            <div class="card">
+                <a href="hafta6.html" target="_blank">Hafta 6 Flexbox</a>
+            </div>
+            <div class="card">
+                <a href="hafta7.html" target="_blank">Hafta 7 CSS Animation</a>
+            </div>
+            <div class="card">
+                <a href="hafta8.html" target="_blank">Hafta 8 Bootstrap</a>
+            </div>
+            <div class="card">
+                <a href="hafta9.html" target="_blank">Hafta 9 JavaScript</a>
+            </div>
+            <div class="card">
+                <a href="hafta10.html" target="_blank">Hafta 10 Test Uygulaması</a>
+            </div>
         </div>
     </div>
 </body>
